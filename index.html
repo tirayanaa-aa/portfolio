@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athirah Ilyana | IT Portfolio</title>
+  <meta name="description" content="Portfolio of Athirah Ilyana Binti Azhar — IT Graduate specialising in QA Testing, Data Science, Python, and Software Quality Assurance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>ATHIRAH<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+      <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+      <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+      <li><a href="#certificates" class="nav-link" id="nav-certs">Certificates</a></li>
+      <li>
+        <button class="nav-btn" id="btn-about" onclick="openModal('about-modal')">About Me</button>
+      </li>
+      <li>
+        <button class="nav-btn nav-btn-outline" id="btn-resume" onclick="openModal('resume-modal')">📄 Resume</button>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#certificates" onclick="toggleMenu()">Certificates</a>
+    <a href="#" onclick="openModal('about-modal'); toggleMenu()">About Me</a>
+    <a href="#" onclick="openModal('resume-modal'); toggleMenu()">📄 Resume</a>
+  </div>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero" id="home">
+    <!-- Animated background canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">ATHIRAH</span>
+        <span class="title-line title-accent">ILYANA</span>
+      </h1>
+      <p class="hero-subtitle">IT Graduate &nbsp;|&nbsp; QA Engineer &nbsp;|&nbsp; Data Science Enthusiast</p>
+      <p class="hero-desc">
+        Highly motivated Information Technology graduate with expertise in Quality Assurance,
+        software testing, and data analysis. Passionate about delivering high-quality software
+        solutions and making meaningful impact.
+      </p>
+      <div class="hero-cta">
+        <button class="btn-primary" id="hero-about-btn" onclick="openModal('about-modal')">
+          <span>▶</span> About Me
+        </button>
+        <button class="btn-secondary" id="hero-resume-btn" onclick="openModal('resume-modal')">
+          📄 View Resume
+        </button>
+        <button class="btn-secondary" id="hero-projects-btn" onclick="scrollToSection('projects')">
+          🔍 My Projects
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">3.46</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">4+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">6+</span>
+          <span class="stat-label">Certificates</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">3</span>
+          <span class="stat-label">Languages</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-profile-card">
+      <div class="profile-img-wrapper">
+        <img src="profile.jpg" alt="Athirah Ilyana" class="profile-img" />
+        <div class="profile-ring"></div>
+      </div>
+      <div class="profile-badge">
+        <span class="badge-icon">🎓</span>
+        <div>
+          <p class="badge-title">BSc IT (Hons)</p>
+          <p class="badge-sub">UMK · Data Science</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" onclick="scrollToSection('projects')">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURED ROW — Work Experience ====== -->
+  <section class="content-row" id="experience">
+    <div class="row-header">
+      <span class="row-tag">FEATURED</span>
+      <h2 class="row-title">Work Experience</h2>
+    </div>
+    <div class="cards-track">
+
+      <div class="exp-card" tabindex="0">
+        <div class="exp-card-top">
+          <div class="exp-icon">🧪</div>
+          <span class="exp-type">Internship</span>
+        </div>
+        <h3 class="exp-role">QA Testing Intern</h3>
+        <p class="exp-company">Entomo Digital Sdn Bhd</p>
+        <p class="exp-date">Feb 2026 – Jul 2026</p>
+        <ul class="exp-bullets">
+          <li>Manual testing: functional, regression, sanity & UAT</li>
+          <li>Executed test cases & reported defects via Jira</li>
+          <li>UI/UX validation using Figma comparisons</li>
+          <li>Selenium automation for Health Screening module</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-chip">Selenium</span>
+          <span class="skill-chip">Jira</span>
+          <span class="skill-chip">Figma</span>
+        </div>
+      </div>
+
+      <div class="exp-card" tabindex="0">
+        <div class="exp-card-top">
+          <div class="exp-icon">📚</div>
+          <span class="exp-type">Part Time</span>
+        </div>
+        <h3 class="exp-role">Assistant Teacher</h3>
+        <p class="exp-company">Tadika Permata Nur Ain</p>
+        <p class="exp-date">Aug – Sep 2024</p>
+        <ul class="exp-bullets">
+          <li>Maintained organised classroom records</li>
+          <li>Supervised daily routines & activities</li>
+          <li>Organised digital & physical learning materials</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-chip">Organisation</span>
+          <span class="skill-chip">Teamwork</span>
+        </div>
+      </div>
+
+      <div class="exp-card" tabindex="0">
+        <div class="exp-card-top">
+          <div class="exp-icon">🏫</div>
+          <span class="exp-type">Part Time</span>
+        </div>
+        <h3 class="exp-role">Substitute Teacher</h3>
+        <p class="exp-company">Sra Abd Rahman Bin Auf</p>
+        <p class="exp-date">Jun–Sep 2022 | Jul–Oct 2023</p>
+        <ul class="exp-bullets">
+          <li>Managed student records with digital tools</li>
+          <li>Prepared lesson materials (Word & PowerPoint)</li>
+          <li>Created and edited digital documents</li>
+          <li>Coordinated student activities & event documentation</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-chip">MS Office</span>
+          <span class="skill-chip">Data Handling</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ROW ====== -->
+  <section class="content-row" id="projects">
+    <div class="row-header">
+      <span class="row-tag">TOP PICKS</span>
+      <h2 class="row-title">Project Experience</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card" id="proj-selenium" tabindex="0">
+        <div class="project-card-bg bg-selenium"></div>
+        <div class="project-card-content">
+          <span class="project-category">Testing & Automation</span>
+          <h3 class="project-title">Selenium Automation Project</h3>
+          <p class="project-desc">Developed basic test scripts for browser automation, gaining hands-on practical experience in software quality assurance during internship.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Browser Automation</span>
+          </div>
+        </div>
+        <div class="project-hover-overlay">
+          <div class="hover-content">
+            <h4>Selenium Automation</h4>
+            <p>Studied automation testing methodologies and developed scripts to test web applications automatically, reducing manual testing effort.</p>
+            <span class="match-badge">🔧 QA & Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-featured" id="proj-capstone" tabindex="0">
+        <div class="project-card-bg bg-capstone"></div>
+        <div class="project-card-content">
+          <span class="project-category">Capstone · App Development</span>
+          <h3 class="project-title">Green Marketplace App</h3>
+          <p class="project-desc">Served as COO — identified and gathered data to support app development for buying, selling & discovering eco-friendly products.</p>
+          <div class="project-tech">
+            <span class="tech-tag">FlutterFlow</span>
+            <span class="tech-tag">Data Collection</span>
+            <span class="tech-tag">Product Management</span>
+          </div>
+        </div>
+        <div class="project-hover-overlay">
+          <div class="hover-content">
+            <h4>Green Marketplace App</h4>
+            <p>Led as COO in Digital Entrepreneurship project, ensuring accurate product data for eco-friendly marketplace used by end consumers.</p>
+            <span class="match-badge">🌿 Digital Entrepreneurship</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" id="proj-iot" tabindex="0">
+        <div class="project-card-bg bg-iot"></div>
+        <div class="project-card-content">
+          <span class="project-category">Internet of Things</span>
+          <h3 class="project-title">Smart Fish Feeding System</h3>
+          <p class="project-desc">Built an IoT-powered automatic fish feeding system to promote sustainable aquaculture and support SDG 2 — Zero Hunger.</p>
+          <div class="project-tech">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Automation</span>
+            <span class="tech-tag">Sustainability</span>
+          </div>
+        </div>
+        <div class="project-hover-overlay">
+          <div class="hover-content">
+            <h4>Smart Fish Feeding System</h4>
+            <p>Leveraged IoT sensors to automate fish feeding schedules, improving productivity and sustainability in aquaculture aligned with SDG 2.</p>
+            <span class="match-badge">🐟 IoT · SDG2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" id="proj-datamining" tabindex="0">
+        <div class="project-card-bg bg-datamining"></div>
+        <div class="project-card-content">
+          <span class="project-category">Data Science & Analytics</span>
+          <h3 class="project-title">Data Mining & Applications</h3>
+          <p class="project-desc">Analysed district-level income, poverty & population data in Malaysia to identify development disparities for government resource planning.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Data Visualisation</span>
+          </div>
+        </div>
+        <div class="project-hover-overlay">
+          <div class="hover-content">
+            <h4>Data Mining & Applications</h4>
+            <p>Applied data analysis techniques to district-level government datasets, surfacing insights to guide targeted resource allocation in Malaysia.</p>
+            <span class="match-badge">📊 Data Science</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== SKILLS ROW ====== -->
+  <section class="content-row" id="skills">
+    <div class="row-header">
+      <span class="row-tag">MY TOOLKIT</span>
+      <h2 class="row-title">Skills & Technologies</h2>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3 class="skills-cat-title">💻 Technical Skills</h3>
+        <div class="skills-pills">
+          <div class="skill-pill" data-level="70">
+            <span class="pill-icon">🐍</span>
+            <span class="pill-name">Python</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="75">
+            <span class="pill-icon">🧪</span>
+            <span class="pill-name">Selenium</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="68">
+            <span class="pill-icon">🗄️</span>
+            <span class="pill-name">SQL</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:68%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="80">
+            <span class="pill-icon">📋</span>
+            <span class="pill-name">Jira</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="65">
+            <span class="pill-icon">📱</span>
+            <span class="pill-name">FlutterFlow</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:65%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="72">
+            <span class="pill-icon">🎨</span>
+            <span class="pill-name">Figma</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="70">
+            <span class="pill-icon">📊</span>
+            <span class="pill-name">Data Visualisation</span>
+            <div class="pill-bar"><div class="pill-fill" style="--w:70%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-cat-title">🌐 Languages</h3>
+        <div class="lang-grid">
+          <div class="lang-card">
+            <div class="lang-flag">🇲🇾</div>
+            <p class="lang-name">Malay</p>
+            <p class="lang-level fluent">Fluent</p>
+          </div>
+          <div class="lang-card">
+            <div class="lang-flag">🇬🇧</div>
+            <p class="lang-name">English</p>
+            <p class="lang-level basic">Basic</p>
+          </div>
+          <div class="lang-card">
+            <div class="lang-flag">🇨🇳</div>
+            <p class="lang-name">Mandarin</p>
+            <p class="lang-level basic">Basic</p>
+          </div>
+          <div class="lang-card">
+            <div class="lang-flag">🇸🇦</div>
+            <p class="lang-name">Arabic</p>
+            <p class="lang-level basic">Basic</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-cat-title">🤝 Soft Skills</h3>
+        <div class="soft-skills">
+          <span class="soft-skill">Teamwork & Collaboration</span>
+          <span class="soft-skill">Attention to Detail</span>
+          <span class="soft-skill">Problem Solving</span>
+          <span class="soft-skill">Analytical Thinking</span>
+          <span class="soft-skill">Communication</span>
+          <span class="soft-skill">Time Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CERTIFICATES ROW ====== -->
+  <section class="content-row" id="certificates">
+    <div class="row-header">
+      <span class="row-tag">ACHIEVEMENTS</span>
+      <h2 class="row-title">Certificates & Awards</h2>
+    </div>
+    <div class="certs-slider" id="certs-slider">
+
+      <div class="cert-card">
+        <div class="cert-icon">💻</div>
+        <h4 class="cert-title">The Art of Coding</h4>
+        <p class="cert-org">FSDK Webinar Series</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🤖</div>
+        <h4 class="cert-title">AI Application in Business</h4>
+        <p class="cert-org">Webinar Program</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🚀</div>
+        <h4 class="cert-title">Chairman Entrepreneurship</h4>
+        <p class="cert-org">CELS Lecture Series</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <div class="cert-card cert-card-highlight">
+        <div class="cert-icon">🦁</div>
+        <h4 class="cert-title">The Lion's Lair Competition</h4>
+        <p class="cert-org">2025</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h4 class="cert-title">The Trailblazer Cup</h4>
+        <p class="cert-org">2025</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🔬</div>
+        <h4 class="cert-title">AI & Data Science Seminar</h4>
+        <p class="cert-org">Seminar Program</p>
+        <span class="cert-type">Certificate of Participation</span>
+      </div>
+
+      <!-- Achievements -->
+      <div class="cert-card cert-card-achievement">
+        <div class="cert-icon">🎖️</div>
+        <h4 class="cert-title">Dean's List</h4>
+        <p class="cert-org">Semester 2</p>
+        <span class="cert-type">Academic Achievement</span>
+      </div>
+
+      <div class="cert-card cert-card-achievement">
+        <div class="cert-icon">🎮</div>
+        <h4 class="cert-title">3rd Place — E-Sport</h4>
+        <p class="cert-org">Faculty Representative</p>
+        <span class="cert-type">Competition Award</span>
+      </div>
+
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="cert-prev" onclick="slideCerts(-1)">‹</button>
+      <button class="slider-btn" id="cert-next" onclick="slideCerts(1)">›</button>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION ROW ====== -->
+  <section class="content-row" id="education">
+    <div class="row-header">
+      <span class="row-tag">BACKGROUND</span>
+      <h2 class="row-title">Education</h2>
+    </div>
+    <div class="edu-timeline">
+      <div class="edu-item">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <div class="edu-period">2022 – 2026</div>
+          <h3 class="edu-degree">Bachelor of Information Technology (Hons)</h3>
+          <p class="edu-inst">Universiti Malaysia Kelantan (UMK)</p>
+          <div class="edu-details">
+            <span class="edu-detail">🔬 Track: Data Science</span>
+            <span class="edu-detail">📈 CGPA: 3.46</span>
+            <span class="edu-detail">🏅 Dean's List — Sem 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <div class="edu-period">2021 – 2022</div>
+          <h3 class="edu-degree">Sijil Tinggi Agama Malaysia (STAM)</h3>
+          <p class="edu-inst">Maktab Mahmud Pokok Sena, Kedah</p>
+          <div class="edu-details">
+            <span class="edu-detail">📜 Grade: Jayyid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="content-row contact-section" id="contact">
+    <div class="contact-inner">
+      <h2 class="contact-title">Let's <span class="accent-text">Connect</span></h2>
+      <p class="contact-sub">Open to internships, junior roles, and collaborative projects.</p>
+      <div class="contact-links">
+        <a class="contact-chip" id="contact-email" href="mailto:tirayanaa@gmail.com">
+          <span>📧</span> tirayanaa@gmail.com
+        </a>
+        <a class="contact-chip" id="contact-phone" href="tel:0167050448">
+          <span>📱</span> 016-7050448
+        </a>
+        <a class="contact-chip" id="contact-linkedin" href="https://linkedin.com/in/athirahilyana" target="_blank" rel="noopener">
+          <span>💼</span> linkedin.com/in/athirahilyana
+        </a>
+        <a class="contact-chip" id="contact-location">
+          <span>📍</span> Rawang, Selangor
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>ATHIRAH<span class="logo-bracket">/&gt;</span>
+    </div>
+    <p class="footer-copy">© 2026 Athirah Ilyana Binti Azhar · Built with passion for IT</p>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- ====== ABOUT MODAL ====== -->
+  <!-- ============================================================ -->
+  <div class="modal-overlay" id="about-modal" onclick="closeModalOnOverlay(event, 'about-modal')">
+    <div class="modal modal-about">
+      <button class="modal-close" onclick="closeModal('about-modal')">✕</button>
+
+      <div class="modal-about-left">
+        <img src="profile.jpg" alt="Athirah Ilyana" class="modal-profile-img" />
+        <div class="modal-name-block">
+          <h2>Athirah Ilyana</h2>
+          <p>Binti Azhar</p>
+        </div>
+        <div class="modal-contact-list">
+          <div class="mc-item"><span>📧</span><span>tirayanaa@gmail.com</span></div>
+          <div class="mc-item"><span>📱</span><span>016-7050448</span></div>
+          <div class="mc-item"><span>📍</span><span>Rawang, Selangor</span></div>
+          <div class="mc-item"><span>💼</span><a href="https://linkedin.com/in/athirahilyana" target="_blank">linkedin.com/in/athirahilyana</a></div>
+        </div>
+      </div>
+
+      <div class="modal-about-right">
+        <div class="modal-tag">About Me</div>
+        <h3 class="modal-heading">Who Am I?</h3>
+        <p class="modal-bio">
+          I'm <strong>Athirah Ilyana Binti Azhar</strong> — a highly motivated and detail-oriented
+          Information Technology graduate with a passion for <strong>Quality Assurance</strong>,
+          software testing, and data analysis.
+        </p>
+        <p class="modal-bio">
+          Currently completing my internship at <strong>Entomo Digital Sdn Bhd</strong> as a
+          QA Tester, I have hands-on experience in manual testing, Selenium automation, Jira,
+          Figma-based UI/UX validation, and data-driven decision making.
+        </p>
+        <p class="modal-bio">
+          I'm pursuing a <strong>Bachelor of Information Technology with Honours</strong> at
+          Universiti Malaysia Kelantan (Data Science track, CGPA 3.46). I'm eager to grow
+          professionally and contribute to dynamic, impact-driven teams.
+        </p>
+
+        <div class="modal-highlights">
+          <div class="highlight-item">
+            <span class="h-icon">🎓</span>
+            <div>
+              <strong>UMK — BSc IT (Hons)</strong>
+              <p>Data Science · CGPA 3.46</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="h-icon">🧪</span>
+            <div>
+              <strong>QA Testing Intern</strong>
+              <p>Entomo Digital Sdn Bhd · 2026</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="h-icon">🏅</span>
+            <div>
+              <strong>Dean's List Achiever</strong>
+              <p>Semester 2 Academic Excellence</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="h-icon">🌟</span>
+            <div>
+              <strong>Multi-lingual</strong>
+              <p>Malay · English · Mandarin · Arabic</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-skills-row">
+          <span class="ms-chip">Python</span>
+          <span class="ms-chip">Selenium</span>
+          <span class="ms-chip">SQL</span>
+          <span class="ms-chip">Jira</span>
+          <span class="ms-chip">FlutterFlow</span>
+          <span class="ms-chip">Figma</span>
+          <span class="ms-chip">Data Analysis</span>
+        </div>
+
+        <div class="modal-cta-row">
+          <button class="btn-primary" onclick="closeModal('about-modal'); openModal('resume-modal')">
+            📄 View My Resume
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ====== RESUME MODAL ====== -->
+  <!-- ============================================================ -->
+  <div class="modal-overlay" id="resume-modal" onclick="closeModalOnOverlay(event, 'resume-modal')">
+    <div class="modal modal-resume">
+      <button class="modal-close" onclick="closeModal('resume-modal')">✕</button>
+
+      <div class="resume-header">
+        <div class="resume-header-left">
+          <img src="profile.jpg" alt="Athirah Ilyana" class="resume-photo" />
+          <div>
+            <h2 class="resume-name">ATHIRAH ILYANA BINTI AZHAR</h2>
+            <p class="resume-role">IT Graduate · QA Engineer · Data Science Track</p>
+            <div class="resume-contacts">
+              <span>📱 0167050448</span>
+              <span>📧 tirayanaa@gmail.com</span>
+              <span>📍 Rawang, Selangor</span>
+              <span>💼 linkedin.com/in/athirahilyana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-body">
+
+        <div class="resume-col resume-col-left">
+          <!-- Profile -->
+          <div class="r-section">
+            <h3 class="r-section-title">Profile</h3>
+            <p class="r-text">Highly motivated and detail-oriented Information Technology (Hons) graduate with practical experience in Quality Assurance (QA), software testing, and data analysis gained through industrial training. Skilled in manual testing, Selenium (basic), Python, SQL, Jira, and data visualisation, with strong analytical and problem-solving abilities.</p>
+          </div>
+
+          <!-- Education -->
+          <div class="r-section">
+            <h3 class="r-section-title">Education</h3>
+            <div class="r-item">
+              <div class="r-item-header">
+                <span class="r-period">2022 – 2026</span>
+              </div>
+              <strong>Bachelor of Information Technology (Hons)</strong>
+              <p class="r-inst">Universiti Malaysia Kelantan</p>
+              <ul class="r-list">
+                <li>Track: Data Science</li>
+                <li>CGPA: 3.46</li>
+              </ul>
+            </div>
+            <div class="r-item">
+              <div class="r-item-header">
+                <span class="r-period">2021 – 2022</span>
+              </div>
+              <strong>STAM — Sijil Tinggi Agama Malaysia</strong>
+              <p class="r-inst">Maktab Mahmud Pokok Sena, Kedah</p>
+              <ul class="r-list">
+                <li>Grade: Jayyid</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="r-section">
+            <h3 class="r-section-title">Skills & Languages</h3>
+            <div class="r-skills-grid">
+              <div>
+                <p class="r-skill-cat">Programming</p>
+                <p>Python (basic)</p>
+                <p class="r-skill-cat">Mobile App Dev</p>
+                <p>FlutterFlow</p>
+                <p class="r-skill-cat">Testing Tools</p>
+                <p>Selenium, Jira, Figma</p>
+              </div>
+              <div>
+                <p class="r-skill-cat">Languages</p>
+                <p>🇲🇾 Malay (Fluent)</p>
+                <p>🇬🇧 English (Basic)</p>
+                <p>🇨🇳 Mandarin (Basic)</p>
+                <p>🇸🇦 Arabic (Basic)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div class="r-section">
+            <h3 class="r-section-title">Achievements</h3>
+            <ul class="r-list">
+              <li>🏅 Dean's List — Semester 2</li>
+              <li>🎮 3rd Place — E-Sport Competition (Faculty Rep)</li>
+            </ul>
+          </div>
+
+          <!-- Reference -->
+          <div class="r-section">
+            <h3 class="r-section-title">Reference</h3>
+            <p><strong>Nantha Kumar Valayatham</strong></p>
+            <p>QA Manager · Entomo Digital Sdn Bhd</p>
+            <p>nantha.k@entomo.co</p>
+            <p>016-4252427</p>
+          </div>
+        </div>
+
+        <div class="resume-col resume-col-right">
+          <!-- Work Experience -->
+          <div class="r-section">
+            <h3 class="r-section-title">Work Experience</h3>
+
+            <div class="r-item">
+              <strong>QA Testing (Internship) · Entomo Digital Sdn Bhd</strong>
+              <p class="r-period-inline">3 Feb 2026 – 23 Jul 2026</p>
+              <ul class="r-list">
+                <li>Manual testing: functional, regression, sanity & UAT</li>
+                <li>Created test cases, test scenarios & test reports</li>
+                <li>Reported & tracked defects using Jira</li>
+                <li>UI/UX validation using Figma design specs</li>
+                <li>Selenium automation for Health Screening module</li>
+              </ul>
+            </div>
+
+            <div class="r-item">
+              <strong>Assistant Teacher (Part Time) · Tadika Permata Nur Ain</strong>
+              <p class="r-period-inline">26 Aug – 27 Sep 2024</p>
+              <ul class="r-list">
+                <li>Maintained organised classroom records</li>
+                <li>Supervised daily routines</li>
+                <li>Organised digital/physical learning materials</li>
+              </ul>
+            </div>
+
+            <div class="r-item">
+              <strong>Substitute Teacher (Part Time) · Sra Abd Rahman Bin Auf</strong>
+              <p class="r-period-inline">Jun–Sep 2022 | Jul–Oct 2023</p>
+              <ul class="r-list">
+                <li>Managed student records with digital tools</li>
+                <li>Prepared lesson materials (Word & PowerPoint)</li>
+                <li>Created and edited digital documents</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project Experience -->
+          <div class="r-section">
+            <h3 class="r-section-title">Project Experience</h3>
+
+            <div class="r-item">
+              <strong>Basic Selenium Automation Project</strong>
+              <p>Studied Selenium automation testing and developed basic test scripts to gain practical experience with browser automation during internship.</p>
+            </div>
+
+            <div class="r-item">
+              <strong>Capstone & Digital Entrepreneurship (Green Marketplace App)</strong>
+              <p>Served as COO — responsible for identifying & gathering data to support app development ensuring accurate product info for eco-friendly products.</p>
+            </div>
+
+            <div class="r-item">
+              <strong>Internet of Things (Smart Fish Feeding System)</strong>
+              <p>Developed a smart fish feeding system using IoT to promote sustainable aquaculture, supporting SDG 2 by improving feeding efficiency.</p>
+            </div>
+
+            <div class="r-item">
+              <strong>Data Mining & Applications</strong>
+              <p>Analysed district-level data on income, poverty & population in Malaysia to identify development disparities and support government resource planning.</p>
+            </div>
+          </div>
+
+          <!-- Certificates -->
+          <div class="r-section">
+            <h3 class="r-section-title">Certificates</h3>
+            <ul class="r-list">
+              <li>Certificate — FSDK Webinar: The Art of Coding</li>
+              <li>Certificate — AI Application in Business Webinar</li>
+              <li>Certificate — CELS Entrepreneurship Lecture Series</li>
+              <li>Certificate — The Lion's Lair Competition 2025</li>
+              <li>Certificate — The Trailblazer Cup 2025</li>
+              <li>Certificate — AI & Data Science Seminar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script src="app.js"></script>
+</body>
+</html>
